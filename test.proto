@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message TodoList {
+    int32 owner_id = 1;
+    string owner_name = 2;
+
+    message ListItems {
+        int32 state = 1;
+        string task = 2;
+        string due_date = 3;
+    }
+
+    repeated ListItems todos = 3;
+}
